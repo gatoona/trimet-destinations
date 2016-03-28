@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Go By Transit</title>
+  <meta name="description" content="Great Portland Destinations">
+  <meta name="author" content="TriMet">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic,900,900italic|Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://trimet.org/asset/css/style.min.css" />
+  <link rel="stylesheet" href="css/child.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+
+  <link rel="stylesheet" href="css/MarkerCluster.css" />
+
+</head>
+
+<body>
+  <div class="popup-container hidden">
+    <div class="popup-container-content">
+      <div class="popup-container-content-header">
+        <div class="popup-container-content-header-text">Go By Transit</div>
+        <div class="popup-container-content-header-close"><button onclick="hidePopUp(); return false;" style="cursor: pointer; border: 0px;background-color: transparent;width: 24px;"><img src="img/cancel.png"></button></div>
+      </div>
+      <div class="popup-container-content-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </div>
+      <div class="popup-container-content-footer">
+        <button onclick="hidePopUp(); return false;" name="sa" style="padding: 3px 0px; min-width: 80px; font-weight: 300; font-size: 1em;" type="submit" class="button button-submit">Start</button>
+      </div>
+    </div>
+    <div class="popup-container-bg"></div>
+  </div>
+
+  <div class='category-layer hidden'>
+    <div class='category-title'>Choose a category</div>
+    <div class="category-close"><div><img src="img/cancel-white.png"></div></div>
+    <div class='categories-list'>
+      <div class="category-text"><a class="category-select all-categories" category-data="" href="#">ALL</a></div>
+    </div>
+  </div>
+
+
+  <div class="content-container hidden">
+    <div class="content-close"><div><img src="img/cancel-white.png"></div></div>
+    <div class='content-image-container'>
+      <div class='content-image'><img style="width:100%;" src='http://beta.trimet.org/go/files/2016-02/oregon-zoo.jpg'></div>
+    </div>
+    <div class='content-info'>
+      <div class="content-title">Oregon Zoo</div>
+      <div class="content-categories">Nature</div>
+      <div class="content-description">A forested oasis, Mount Talbert towers above busy roads, shopping centers and neighborhoods in Clackamas.</div>
+      <div class="content-button"><a class='site-visit' href="#">Visit site</a></div>
+      <div class="content-button"><a class='plan-trip' href="#">Plan trip</a></div>
+    </div>
+  </div>
+
+  <div class="dd-header">
+    <div class='dd-header-logo animated slideInDown'>
+      <img src="img/header-logo.png" style="width: 100%;">
+    </div>
+    <div class="dd-header-menu-button"><img src="img/menu.png"></div>
+    <div class="dd-header-menu animated hidden-menu-xs">
+      <div class="dd-header-menu-item"><a href='#' id="menu-about">About</a></div>
+      <div class="dd-header-menu-item"><a href='#' id="menu-tips">Travel Tips</a></div>
+      <div class="dd-header-menu-item"><a href='#' id="menu-filter">Filter</a></div>
+    </div>
+  </div>
+
+  <div id="map" style="width:100%; height: 100%;"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="js/MarkerCluster.js"></script>
+  <script src="js/map.js"></script>
+
+
+
+</body>
+</html>
