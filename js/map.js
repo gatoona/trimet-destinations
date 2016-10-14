@@ -187,6 +187,15 @@ function onMarkerClick(location, data){
   }
 }
 
+//zIndexOffset
+
+function zIndex(marker){
+  $.each(destinationsLayer._featureGroup._layers, function( index, value ) {
+    value.setZIndexOffset(0);
+  }); 
+  marker.setZIndexOffset(1000);
+}
+
 var isExpired = function(indefinite, endDate){
   var isIndefinte = Number(indefinite);
   var endDate = new Date(endDate.split(' ').join('T'));
@@ -237,6 +246,7 @@ function setMarkers(destinations, category){
           icon: new L.DivIcon({name: destination.name, imageIcon: destination.image.file }),
           data: destination
         }).on('click', function(e) {
+          zIndex(this);
           onMarkerClick(e.latlng, e.target.options.data);
         });
         destinationsLayer.addLayer(marker);
